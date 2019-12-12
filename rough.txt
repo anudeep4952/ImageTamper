@@ -1,0 +1,20 @@
+# rgb = cv2.merge([b,g,r])
+# im_rgb = cv2.cvtColor(rgb, cv2.COLOR_BGR2RGB)
+# img = pil.fromarray(im_rgb, 'RGB')
+# img.show()
+# img.save('testImages/watermark2SB.png')
+
+
+
+rgb=cv2.merge([b,g,r])
+rgb=cv2.resize(rgb, (64, 64), interpolation=cv2.INTER_AREA)
+
+
+img=cv2.cvtColor(rgb,cv2.COLOR_BGR2RGB)
+img = pil.fromarray(img, 'RGB')
+img.show()
+
+
+l=cv2.hconcat([ti[array[i][j]],wm[i * 64: (i + 1) * 64, j * 64: (j + 1) * 64] * (2 ** (array[i][j] - 1)),x])
+            cv2.imshow('',l)
+            cv2.waitKey(0)
