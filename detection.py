@@ -24,12 +24,12 @@ img=cv2.resize(img, (64, 64), interpolation=cv2.INTER_AREA)
 
 b, g, r = cv2.split(img)
 
-tiB=Image(b).colorDecompose()
-tiG=Image(g).colorDecompose()
-tiR=Image(r).colorDecompose()
+tiB=Image(b).binaryDecompose()
+tiG=Image(g).binaryDecompose()
+tiR=Image(r).binaryDecompose()
 
 img=tamperDetect(wmR,wmB,wmG,tiR,tiB,tiG)
-img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-img = pil.fromarray(img, 'RGB')
+# img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+img = pil.fromarray(img)
 img.show()
 

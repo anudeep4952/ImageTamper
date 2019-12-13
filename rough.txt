@@ -18,3 +18,9 @@ img.show()
 l=cv2.hconcat([ti[array[i][j]],wm[i * 64: (i + 1) * 64, j * 64: (j + 1) * 64] * (2 ** (array[i][j] - 1)),x])
             cv2.imshow('',l)
             cv2.waitKey(0)
+
+
+
+# for i1 in range(64):
+            #     for j1 in range(64):
+            #      print(tiG[array[i][j]][i1][j1],wmG[i * 64: (i + 1) * 64, j * 64: (j + 1) * 64][i1][j1]*x,np.absolute(np.subtract(tiG[array[i][j]][i1][j1], (wmG[i * 64: (i + 1) * 64, j * 64: (j + 1) * 64][i1][j1])*x)))

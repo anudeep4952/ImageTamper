@@ -5,7 +5,7 @@ from Image import Image
 
 img = cv2.imread('testImages/lenaWaterMarked.png', 1)
 
-img[210:350,210:350,:]=255
+#img[210:350,230:360,:]=255
 im_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 img = im.fromarray(im_rgb, 'RGB')
 img.save('testImages/lenaTampered.png')
