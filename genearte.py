@@ -28,7 +28,5 @@ def generate(img):
     two_bit_img1 = two_bit_img * 2
     watermarked_img = x1[8] + x1[7] + x1[6] + x1[5] + x1[4] + x1[3] + two_bit_img1 + one_bit_img
 
-    # cv2.imshow('a',two_bit_img*128)
-    # cv2.waitKey(0)
 
     return watermarked_img

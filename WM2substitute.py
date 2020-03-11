@@ -23,4 +23,6 @@ def generateWM2(img):
     for i in range(8):
         for j in range(8):
             substitute(i * 64, (i + 1) * 64, j * 64, (j + 1) * 64, dict[array[i][j]])
+
+
     return two_bit_img
